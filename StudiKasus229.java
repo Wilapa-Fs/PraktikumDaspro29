@@ -51,7 +51,7 @@ public class StudiKasus229 {
                 System.out.println("Status : Tidak memperoleh dana penghargaan (PKM tidak lolos pendanaan).");
             }
  
-        } else if (jenis.equals("LAINNYA")) {
+        } else if (jenis.equals("lainnya")) {
             // Cabang Lainnya
             System.out.println("Status : Tidak memperoleh dana penghargaan (jenis kegiatan tidak termasuk ketentuan).");
  
