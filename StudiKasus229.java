@@ -32,7 +32,33 @@ public class StudiKasus229 {
             } else {
                 System.out.println("Status : Tidak memperoleh dana penghargaan (hanya untuk Juara 1/2/3).");
             }
+ 
+        } else if (jenis.equals("PKM")) {   
+           
+            System.out.print("Jumlah dokumen  : ");
+            dokumen = sc.nextInt();
+            System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos) : ");
+            pkm = sc.nextInt();
+ 
+            if (pkm == 1) {                                 
+                if (dokumen == 4) {                         
+                    System.out.println("Status : Berhak memperoleh dana penghargaan (PKM lolos pendanaan, dokumen lengkap).");
+                } else {
+                    System.out.println("Status : Dokumen tidak lengkap (kurang " + (4 - dokumen)
+                            + " dokumen). Dana penghargaan tidak diberikan.");
+                }
+            } else {
+                System.out.println("Status : Tidak memperoleh dana penghargaan (PKM tidak lolos pendanaan).");
+            }
+ 
+        } else if (jenis.equals("LAINNYA")) {
+            // Cabang Lainnya
+            System.out.println("Status : Tidak memperoleh dana penghargaan (jenis kegiatan tidak termasuk ketentuan).");
+ 
+        } else {
+            System.out.println("Status : Jenis kegiatan tidak valid.");
         }
+
 
 
     
@@ -47,6 +73,5 @@ public class StudiKasus229 {
         
         
         sc.close();
-         
      }
 }
